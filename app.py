@@ -33,13 +33,14 @@ if radio_opt.index(selected_opt)==1:
 else:
     db_uri=LOCALDB
 
-api_key=st.sidebar.text_input(label='GROQ API Key',type='password')
+api_key=os.getenv("GROQ_API_KEY")
 
 if not db_uri:
-    st.info('Pleae enter the database information and uri')
+    st.info('Please enter the database information and uri')
 
 if not api_key:
-    st.info("Please add the GROQ API key")
+    st.error("Please add the GROQ_API_KEY.")
+    st.stop()
 
 # LLM model
 llm=ChatGroq(groq_api_key=api_key,model_name="llama-3.3-70b-versatile",streaming=True)
