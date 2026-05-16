@@ -19,7 +19,7 @@ An interactive conversational AI application built with Streamlit and LangChain 
 - **Zero-Shot ReAct Agent**: Intelligently reasons about the database schema and structure before querying.
 - **Real-time Streaming**: Watch the agent's thought process and final answer stream in real-time.
 
-## 🚀 Getting Started
+
 
 ### Prerequisites
 
